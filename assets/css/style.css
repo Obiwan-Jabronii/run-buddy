@@ -19,6 +19,7 @@ header {
     background-size: cover;
     background-position: 80%;
     background-attachment: fixed;
+    z-index: 9999;
 }
 header h1 {
     font-weight: bold;
@@ -87,7 +88,7 @@ footer a {
     
 }
 .hero-form{
-    background-color: #fce138;
+    background-color: rgba(252, 225, 56, .7);
     padding: 20px;
     width: 40%;
     color: #024e76;
@@ -97,10 +98,6 @@ footer a {
     margin: 3.5%;
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
     border-radius: 15px;
-}
-.hero-form p{
-    margin: 5px 0 15px 0;
-    display: inline;
 }
 .hero-form h3{
     font-size: 24px;
@@ -116,6 +113,10 @@ footer a {
     margin-bottom: 15px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, .75);
+}
+.hero-form p{
+    margin: 5px 0 15px 0;
+    display: inline;
 }
 .hero-form input:focus {
     background-color: rgba(255, 255, 255, 1);
@@ -323,6 +324,53 @@ section {
 .contact-form button:hover {
     color: #fce138;
     background: #39a6b2;
+}
+.checkbox-wrapper input,.radio-wrapper input {
+    opacity: 0;
+}
+.checkbox-wrapper label,.radio-wrapper label {
+    position: relative;
+    left: 10px;
+    margin: 10px;
+    line-height: 1.6;
+}
+.checkbox-wrapper label::before, .radio-wrapper label::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    background: rgba(255, 255, 255, .75);
+    border: 1px solid #024e76;
+    position: absolute;
+    top: -4px;
+    left: -30px;
+}
+.radio-wrapper label::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #024e76;
+    position: absolute;
+    left: -29px;
+    top: -3px;
+    background-image: radial-gradient(circle, #39a6b2, #024e76);
+}
+.checkbox-wrapper label::after {
+    content: "";
+    height: 6px;
+    width: 14px;
+    border-left: 2px solid #024e76;
+    border-bottom: 2px solid #024e76;
+    position: absolute;
+    left: -26px;
+    top: 1px;
+    transform: rotate(-58deg);
+}
+.checkbox-wrapper input + label::after, .radio-wrapper input + label::after{
+    content: none;
+}
+.checkbox-wrapper input:checked + label::after, .radio-wrapper input:checked + label::after {
+   content: "";
 }
 /* for smaller desktop screen */
 @media screen and (max-width: 980px) {
