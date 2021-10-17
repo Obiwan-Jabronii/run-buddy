@@ -103,7 +103,10 @@ footer a {
     font-size: 24px;
     margin: 0;
 }
-.hero-form input {
+.hero-form p{
+    margin: 5px 0 15px 0;
+}
+.form-input {
     border: 1px solid  #024e76;
     display: block;
     padding: 7px 15px;
@@ -114,10 +117,7 @@ footer a {
     border-radius: 10px;
     background-color: rgba(255, 255, 255, .75);
 }
-.hero-form p{
-    margin: 5px 0 15px 0;
-    display: inline;
-}
+
 .hero-form input:focus {
     background-color: rgba(255, 255, 255, 1);
     outline: none;
@@ -325,16 +325,16 @@ section {
     color: #fce138;
     background: #39a6b2;
 }
-.checkbox-wrapper input,.radio-wrapper input {
+.checkbox-wrapper input, .radio-wrapper input {
     opacity: 0;
 }
-.checkbox-wrapper label,.radio-wrapper label {
+.checkbox-wrapper label, .radio-wrapper label {
     position: relative;
     left: 10px;
     margin: 10px;
     line-height: 1.6;
 }
-.checkbox-wrapper label::before, .radio-wrapper label::before {
+.checkbox-wrapper label::before , .radio-wrapper label::before {
     content: "";
     height: 20px;
     width: 20px;
@@ -343,6 +343,9 @@ section {
     position: absolute;
     top: -4px;
     left: -30px;
+}
+.radio-wrapper label::before {
+    border-radius: 50%;
 }
 .radio-wrapper label::after {
     content: "";
